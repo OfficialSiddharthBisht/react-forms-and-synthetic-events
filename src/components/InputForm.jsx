@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 function InputForm(){
 
     const [formData,setFormData] = React.useState({
@@ -13,15 +12,34 @@ function InputForm(){
 
     });
     const handleChange = (e)=>{
-        let {name,value , type , cheked} = e.target;
-        // value = type === "checkbox"? checked : value;
+        let {name,value, type , checked} = e.target;
+        value = type === "checkbox"? checked : value;
         setFormData({...formData,[name]:value});
     }
     const{name,age,address,department,salary,margialState} = formData;
+
+    const handleSubmit = (event)=>{
+        event.preventDefault();
+        console.log(formData)
+        fetch(`http://localhost:3001/employeDetails`,{
+             method : "POST",
+             headers : {'content-type' : 'application/json'},
+             body : JSON.stringify(formData),   
+        })
+        
+        setFormData({
+            name: "",
+            age : "",
+            address : "",
+            department : "",
+            salary : "",
+            martialState : false
+        })
+    }
     return (
         <>
             <h1>Input Form</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Name :</label>
                 <input
                     type="text"
@@ -47,12 +65,14 @@ function InputForm(){
                 />
                 <br/>
                 <label htmlFor = "department">Department</label>
-                <input 
-                    type="text"
+                <select
                     name = "department"
                     value = {department}
                     onChange = {handleChange}
-                />
+                >
+                     <option value = "sales">Sales</option>
+                     <option value = "operations">Operations</option>
+                </select>
                 <br/>
                 <label htmlFor = "salary">Salary</label>
                 <input 
@@ -62,6 +82,17 @@ function InputForm(){
                     onChange = {handleChange}
                 />
                 <br/>
+                <label htmlFor = "martialStatus">Married ??</label>
+                <input 
+                type="checkbox"
+                name = "martialStatus"
+                value = {margialState}
+                onChange = {handleChange}
+                />
+                <br/>
+                <input 
+                    type="submit"
+                />
             </form></>
     )
 }

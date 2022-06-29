@@ -1,0 +1,14 @@
+{
+  "employeDetails": [
+    {
+      "name": "Siddharth Bisht",
+      "age": "22",
+      "address": "Charton Lodge",
+      "department": "operations",
+      "salary": "75000",
+      "martialState": false,
+      "martialStatus": "",
+      "id": 1
+    }
+  ]
+}
