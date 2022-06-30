@@ -9,6 +9,16 @@
       "martialState": false,
       "martialStatus": "",
       "id": 1
+    },
+    {
+      "name": "Priyanka Bohra",
+      "age": "21",
+      "address": "Tallital Nainital",
+      "department": "",
+      "salary": "15000",
+      "martialState": false,
+      "martialStatus": false,
+      "id": 2
     }
   ]
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function InputForm(){
+function InputForm({getData}){
 
     const [formData,setFormData] = React.useState({
         name: "",
@@ -26,7 +26,7 @@ function InputForm(){
              headers : {'content-type' : 'application/json'},
              body : JSON.stringify(formData),   
         })
-        
+        getData();
         setFormData({
             name: "",
             age : "",
