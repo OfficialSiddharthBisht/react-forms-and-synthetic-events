@@ -14,11 +14,21 @@
       "name": "Priyanka Bohra",
       "age": "21",
       "address": "Tallital Nainital",
-      "department": "",
+      "department": "sales",
       "salary": "15000",
       "martialState": false,
       "martialStatus": false,
       "id": 2
+    },
+    {
+      "name": "Bhawana Bisht",
+      "age": "40",
+      "address": "DVM",
+      "department": "sales",
+      "salary": "80000",
+      "martialState": false,
+      "martialStatus": true,
+      "id": 3
     }
   ]
 }

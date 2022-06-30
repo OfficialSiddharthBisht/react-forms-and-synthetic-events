@@ -70,6 +70,7 @@ function InputForm({getData}){
                     value = {department}
                     onChange = {handleChange}
                 >
+                    <option>select</option>
                      <option value = "sales">Sales</option>
                      <option value = "operations">Operations</option>
                 </select>

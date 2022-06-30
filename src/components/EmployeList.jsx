@@ -21,7 +21,7 @@ function EmployeeList({data}){
                                 <td>{item.name}</td>
                                 <td>{item.age}</td>
                                 <td>{item.address}</td>
-                                <td>{item.departent}</td>
+                                <td>{item.department}</td>
                                 <td>{item.salary}</td>
                                 <td>{item.martialState?"Married":"Bachlor"}</td>
                             </tr>
